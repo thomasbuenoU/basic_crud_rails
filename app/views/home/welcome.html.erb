@@ -3,5 +3,6 @@
 <% @tasks.each do |task| %>
 <li>
   <%= task.description %>
+  <%= link_to 'Editar', edit_task_path(task) %>
 </li>
 <%end%>
