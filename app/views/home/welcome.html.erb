@@ -4,5 +4,8 @@
 <li>
   <%= task.description %>
   <%= link_to 'Editar', edit_task_path(task) %>
+  <%= link_to 'Apagar', task_path(task), method: :delete, data: { confirm: 'Tem certeza que deseja apagar esta tarefa?' }%>
 </li>
 <%end%>
+
+<%= link_to 'Nova tarefa', new_task_path %>
